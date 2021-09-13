@@ -1,0 +1,16 @@
+{
+  "name": "itx-bot",
+  "version": "1.0.0",
+  "description": "Just Bot for ITX KMITL",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "C0M3TZZ",
+  "license": "ISC",
+  "dependencies": {
+    "discord": "^0.8.2",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0"
+  }
+}

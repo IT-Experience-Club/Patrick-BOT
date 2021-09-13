@@ -1,0 +1,27 @@
+{
+    "config": {
+        "selectmenu": [
+            {
+                "CustomId": "Verify",
+                "Placeholder": "คุณเป็นใคร",
+                "Options": [
+                    {
+                        "label": "KMITL",
+                        "description": "เด็กKMITL",
+                        "value": "kmitl",
+                        "emoji": {
+                            "name": "🧑‍🎓"
+                        }
+                    }
+                ],
+                "Roles": {
+                    "kmitl": [
+                        "KMITL",
+                        "Junior"
+                    ]
+                },
+                "Title": "ระบบยืนยันตัว"
+            }
+        ]
+    }
+}

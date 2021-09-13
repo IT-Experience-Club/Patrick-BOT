@@ -1,0 +1,40 @@
+[
+    {
+        "name": "selectmenu",
+        "description": "คำสั่งสำหรับ Select Menu",
+        "options": [
+            {
+                "type": 1,
+                "name": "add",
+                "description": "ใช้เพิ่ม Select menu ลงในห้องแชท",
+                "options": [
+                    {
+                        "type": 3,
+                        "name": "id",
+                        "description": "ID ของ Seclect Menu",
+                        "required": true
+                    }
+                ]
+            },
+            {
+                "type": 1,
+                "name": "update",
+                "description": "ใช้อัพเดจ Select menu จาก ID",
+                "options": [
+                    {
+                        "type": 3,
+                        "name": "message_id",
+                        "description": "Message ID ",
+                        "required": true
+                    },
+                    {
+                        "type": 3,
+                        "name": "id",
+                        "description": "ID ของ Seclect Menu",
+                        "required": true
+                    }
+                ]
+            }
+        ]
+    }
+]
