@@ -5,7 +5,7 @@ module.exports = async (MessageActionRow, MessageSelectMenu, interaction, file, 
         let str_Options = ""
         let index_Options = 1
         let str_role = ""
-        if (get_array_index(new_config, "CustomId", id)) {
+        if (get_array_index(new_config, "CustomId", id) == -1) {
             interaction.reply(" ❌ ไม่พบ ID ในระบบ!")
             setTimeout(() => { interaction.deleteReply() }, 5000)
             return
@@ -17,7 +17,6 @@ module.exports = async (MessageActionRow, MessageSelectMenu, interaction, file, 
             }else{
                 get_emoji = opt.emoji.name
             }
-            console.log(get_emoji)
             str_Options += `${index_Options}. ${opt.value} | Label : ${opt.label} | Emoji : ${get_emoji}\n`
             index_Options++
         })
