@@ -2,69 +2,28 @@
   "config": {
     "selectmenu": [
       {
-        "CustomId": "fullrun",
-        "Placeholder": "test",
+        "CustomId": "Verify",
+        "Placeholder": "คุณเป็นใคร",
         "Options": [
           {
-            "label": "a",
-            "description": "a",
-            "value": "oio",
+            "label": "KMITL",
+            "description": "เด็กKMITL",
+            "value": "kmitl",
             "emoji": {
-              "name": "🅰️"
-            }
-          },
-          {
-            "label": "a",
-            "description": "a",
-            "value": "pop",
-            "emoji": {
-              "name": "djfklsjalf;kasjd"
-            }
-          },
-          {
-            "label": "asdasd",
-            "description": "asdasd",
-            "value": "asdasda",
-            "emoji": {
-              "name": "jksghflgskg"
+              "name": "🧑‍🎓"
             }
           }
         ],
         "Roles": [
           {
-            "value": "one",
-            "roles": []
-          },
-          {
-            "value": "one",
-            "roles": []
-          },
-          {
-            "value": "two",
-            "roles": []
-          },
-          {
-            "value": "three",
-            "roles": []
-          },
-          {
-            "value": "pop",
-            "roles": []
-          },
-          {
-            "value": "oio",
-            "roles": []
-          },
-          {
-            "value": "pop",
-            "roles": []
-          },
-          {
-            "value": "asdasda",
-            "roles": []
+            "value": "kmitl",
+            "roles": [
+              "887011937467105280",
+              "887011981301800960"
+            ]
           }
         ],
-        "Title": "01"
+        "Title": "ระบบยืนยันตัว"
       }
     ]
   }
