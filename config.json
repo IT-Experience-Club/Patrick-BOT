@@ -1,27 +1,71 @@
 {
-    "config": {
-        "selectmenu": [
-            {
-                "CustomId": "Verify",
-                "Placeholder": "คุณเป็นใคร",
-                "Options": [
-                    {
-                        "label": "KMITL",
-                        "description": "เด็กKMITL",
-                        "value": "kmitl",
-                        "emoji": {
-                            "name": "🧑‍🎓"
-                        }
-                    }
-                ],
-                "Roles": {
-                    "kmitl": [
-                        "KMITL",
-                        "Junior"
-                    ]
-                },
-                "Title": "ระบบยืนยันตัว"
+  "config": {
+    "selectmenu": [
+      {
+        "CustomId": "fullrun",
+        "Placeholder": "test",
+        "Options": [
+          {
+            "label": "a",
+            "description": "a",
+            "value": "oio",
+            "emoji": {
+              "name": "🅰️"
             }
-        ]
-    }
+          },
+          {
+            "label": "a",
+            "description": "a",
+            "value": "pop",
+            "emoji": {
+              "name": "djfklsjalf;kasjd"
+            }
+          },
+          {
+            "label": "asdasd",
+            "description": "asdasd",
+            "value": "asdasda",
+            "emoji": {
+              "name": "jksghflgskg"
+            }
+          }
+        ],
+        "Roles": [
+          {
+            "value": "one",
+            "roles": []
+          },
+          {
+            "value": "one",
+            "roles": []
+          },
+          {
+            "value": "two",
+            "roles": []
+          },
+          {
+            "value": "three",
+            "roles": []
+          },
+          {
+            "value": "pop",
+            "roles": []
+          },
+          {
+            "value": "oio",
+            "roles": []
+          },
+          {
+            "value": "pop",
+            "roles": []
+          },
+          {
+            "value": "asdasda",
+            "roles": []
+          }
+        ],
+        "Title": "01"
+      }
+    ]
+  }
 }
