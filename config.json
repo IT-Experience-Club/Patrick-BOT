@@ -1,5 +1,6 @@
 {
   "config": {
+    "selectmenu_role_perm": ["Role ID Here", "Role ID Here"],
     "selectmenu": [
       {
         "CustomId": "Verify",
