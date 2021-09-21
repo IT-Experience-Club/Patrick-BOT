@@ -64,42 +64,63 @@ client.on("interactionCreate", async (interaction) => {
     }
 })
 
+function checkrole(array, inter) {
+    let get_prem = false
+    inter.member.roles.cache.some(role => {
+        array.forEach(role_id => {
+            if (get_prem == true){
+                return
+            }
+            if (role.id == role_id) {
+                get_prem = true
+            }
+        })
+    })
+    return get_prem
+}
+
 // อันนี้ไว้จัดการ Select Menu ทั้ง Add กับ Update
 // อนาคตอาจจะเพิ่ม Crate, Edit, Remove **** ขอเวลาสักพักเลย
 client.on("interactionCreate", async (interaction) => {
     if (!interaction.isCommand()) { return }
-    if (interaction.options.getSubcommand() == "get") {
-        require("./commands/sm_get.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "sent") {
-        require("./commands/sm_add.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "update") {
-        require("./commands/sm_update")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "create") {
-        require("./commands/SelectMenu/sm_create.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "edit") {
-        require("./commands/SelectMenu/sm_edit.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "remove") {
-        require("./commands/SelectMenu/sm_remove")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "add_options") {
-        require("./commands/Options/sm_add_options.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "edit_options") {
-        require("./commands/Options/sm_edit_options.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "remove_options") {
-        require("./commands/Options/sm_remove_options.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "add_roles") {
-        require("./commands/Roles/sm_add_roles.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
-    }
-    if (interaction.options.getSubcommand() == "remove_roles") {
-        require("./commands/Roles/sm_remove_roles.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+
+    if (checkrole(config.selectmenu_role_perm, interaction)) {        
+        if (interaction.options.getSubcommand() == "get") {
+            require("./commands/sm_get.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "sent") {
+            require("./commands/sm_add.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "update") {
+            require("./commands/sm_update")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "create") {
+            require("./commands/SelectMenu/sm_create.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "edit") {
+            require("./commands/SelectMenu/sm_edit.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "remove") {
+            require("./commands/SelectMenu/sm_remove")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "add_options") {
+            require("./commands/Options/sm_add_options.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "edit_options") {
+            require("./commands/Options/sm_edit_options.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "remove_options") {
+            require("./commands/Options/sm_remove_options.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "add_roles") {
+            require("./commands/Roles/sm_add_roles.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+        if (interaction.options.getSubcommand() == "remove_roles") {
+            require("./commands/Roles/sm_remove_roles.js")(MessageActionRow, MessageSelectMenu, interaction, file, globalfunc)
+        }
+    }else{
+        interaction.reply("คุณไม่สามารถใช้คำสั่งนี้ได้เพราะ คำสังพวกนี้สำหรับ Admin และ Mod เท่านั้น")
+        setTimeout(() => {interaction.deleteReply()}, 5000)
     }
 
 })

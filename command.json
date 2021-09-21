@@ -57,6 +57,12 @@
                         "name": "title",
                         "description": "ข้อความที่แสดงบน Select Menu",
                         "required": true
+                    },
+                    {
+                        "type": 4,
+                        "name": "max_selection",
+                        "description": "เลือกได้สูดสุดกี่ตัวเลือก",
+                        "required": false
                     }
                 ]
             },
@@ -85,6 +91,11 @@
                         "type": 3,
                         "name": "title",
                         "description": "ข้อความที่แสดงบน Select Menu"
+                    },
+                    {
+                        "type": 4,
+                        "name": "max_selection",
+                        "description": "เลือกได้สูดสุดกี่ตัวเลือก"
                     }
                 ]
             },

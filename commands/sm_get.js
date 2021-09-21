@@ -49,6 +49,11 @@ module.exports = async (MessageActionRow, MessageSelectMenu, interaction, file, 
                     "inline": true
                 },
                 {
+                    "name": `Max Selection`,
+                    "value": `${menu.max_selection}`,
+                    "inline": true
+                },
+                {
                     "name": `Options`,
                     "value": `${str_Options}`
                 },
