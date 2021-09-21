@@ -4,6 +4,7 @@
       {
         "CustomId": "Verify",
         "Placeholder": "คุณเป็นใคร",
+        "max_selection": 1,
         "Options": [
           {
             "label": "KMITL",
@@ -17,10 +18,7 @@
         "Roles": [
           {
             "value": "kmitl",
-            "roles": [
-              "887011937467105280",
-              "887011981301800960"
-            ]
+            "roles": []
           }
         ],
         "Title": "ระบบยืนยันตัว"
