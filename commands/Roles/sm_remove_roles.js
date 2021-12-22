@@ -19,7 +19,7 @@ module.exports = async (MessageActionRow, MessageSelectMenu, interaction, file, 
     get_roles.forEach(new_role => {
         if (get_roles_id.roles.includes(new_role)) {
             const cordition = (index) => index == new_role
-            get_roles_id.roles.splice(get_roles_id.findIndex(cordition), 1)
+            get_roles_id.roles.splice(get_roles_id.roles.findIndex(cordition), 1)
         } else {
             return
         }

@@ -7,7 +7,7 @@ const command = require("./command.json")
 const dotenv = require("dotenv")
 const editJsonFile = require("edit-json-file");
 let file = editJsonFile(`./config.json`);
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS] });
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILDS] });
 dotenv.config()
 const globalfunc = require('./functions/global_function.js')
 client.once('ready', () => {
