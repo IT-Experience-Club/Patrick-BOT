@@ -52,15 +52,17 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.add(realr)
             })
         })
-        interaction.reply("กำลังดำเนินการ")
-        setTimeout(() => {
-            interaction.deleteReply()
-        }, 5000)
+        interaction.reply("กำลังดำเนินการ").then(
+            setTimeout(() => {
+                interaction.deleteReply()
+            }, 5000)
+        )
     } catch (error) {
-        let mess = await interaction.channel.send("มีบางอย่างผิดพลาด")
-        setTimeout(() => {
-            mess.delete()
-        }, 5000)
+        let mess = await interaction.channel.send("มีบางอย่างผิดพลาด").then(
+            setTimeout(() => {
+                mess.delete()
+            }, 5000)
+        )
     }
 })
 
