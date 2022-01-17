@@ -52,7 +52,7 @@ client.on("interactionCreate", async (interaction) => {
                 interaction.member.roles.add(realr)
             })
         })
-        interaction.reply("กำลังดำเนินการ").then(
+        await interaction.reply("กำลังดำเนินการ").then(
             setTimeout(() => {
                 interaction.deleteReply()
             }, 5000)
