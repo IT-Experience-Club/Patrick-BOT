@@ -23,8 +23,7 @@ module.exports = {
 		}
 		
 		const rest = new REST({ version: '9' }).setToken(process.env.Token);
-
-		rest.put(Routes.applicationGuildCommands(client.user.id, process.env.DEV_GUILD_ID), {
+		rest.put(Routes.applicationGuildCommands(client.user.id, process.env.GUILD_ID), {
 				body: commands
 			})
 			.then(() => console.log(chalk.bgHex('#5865F2').hex('#FFFFFF').bold(" Discord ") + ' >> Successfully registered application commands.'))

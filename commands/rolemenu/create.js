@@ -31,7 +31,8 @@ module.exports = {
                         "emoji": {
                             "name": "🔧"
                         },
-                        "roles": []
+                        "roles": [],
+                        "exec": ""
                     }],
                     "title": title
                 });

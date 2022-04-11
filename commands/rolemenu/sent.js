@@ -16,6 +16,7 @@ module.exports = {
                     content: "ไม่พบ ID ที่ระบุ",
                     ephemeral: true
                 });
+                return
             }
 
             if (menu.max_selections > menu.options.length) {

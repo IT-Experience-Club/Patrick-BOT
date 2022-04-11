@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { Collection } = require('discord.js');
+const { Collection, Permissions } = require('discord.js');
 const fs = require('fs');
 
 const test = new Collection();
@@ -111,6 +111,14 @@ module.exports = {
 						)),
 
 	async execute(interaction) {
+		if (!interaction.member.permissions.has(Permissions.FLAGS.MANAGE_ROLES)) {
+			await interaction.reply({
+				content: "You don't have the permission to use this command",
+				ephemeral: true,
+			});
+			return;
+		}
+
 		var command_name = interaction.commandName
 		if (interaction.options._group != null) {
 			command_name = command_name + "_" + interaction.options._group

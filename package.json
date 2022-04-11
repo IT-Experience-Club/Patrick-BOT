@@ -1,6 +1,6 @@
 {
   "name": "patrick-bot",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Just Bot for ITX KMITL",
   "main": "bot.js",
   "scripts": {

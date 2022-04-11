@@ -32,14 +32,14 @@ module.exports = {
 				}else{
 					getOptions.roles.forEach(async (role) => {
 						try {
-							await interaction.reply({
-								content: "ดำเนินการเสร็จเรียบร้อย",
-								ephemeral: true,
-							});
 							await interaction.member.roles.add(role)
 						} catch (error) {
 							
 						}
+					});
+					await interaction.reply({
+						content: "ดำเนินการเสร็จเรียบร้อย",
+						ephemeral: true,
 					});
 				}
 			});
